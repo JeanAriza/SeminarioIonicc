@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LibraryService } from '../services/library.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController,MenuController,NavController } from '@ionic/angular';
 import { BooksModalPage } from '../books-modal/books-modal.page';
 
 
@@ -22,7 +22,9 @@ export class HomePage {
   }
   constructor(
     private libraryService: LibraryService,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private navCtrl: NavController,
+    private menu: MenuController
     ) {}
 
   ionViewDidEnter(){
@@ -42,5 +44,16 @@ export class HomePage {
     });
     return await modal.present();
   }
+
+  goToAuthors(){
+    this.navCtrl.navigateForward("/menu/authors");
+    this.menu.close();
+  }
+
+  goToBooks(){
+    this.navCtrl.navigateRoot("/menu/books");
+    this.menu.close();
+  }
+
 
 }
