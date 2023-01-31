@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'favorite-books',
     loadChildren: () => import('./favorite-books/favorite-books.module').then( m => m.FavoriteBooksPageModule)
   },
+  {
+    path: 'book-detail-modal',
+    loadChildren: () => import('./book-detail-modal/book-detail-modal.module').then( m => m.BookDetailModalPageModule)
+  },
 ];
 
 @NgModule({
