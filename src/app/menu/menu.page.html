@@ -25,6 +25,12 @@
         <ion-icon name="book-outline" slot="start"></ion-icon>
         Libros
       </ion-item>
+
+      <ion-item (click)="goToMyFavorites()">
+        <ion-icon name="heart-outline" slot="start"></ion-icon>
+        Mis Favoritos
+      </ion-item>
+
       <ion-item (click)="logout()">
         <ion-icon name="log-out" slot="start"></ion-icon>
         Salir

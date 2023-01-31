@@ -56,4 +56,10 @@ export class HomePage {
   }
 
 
+  goToMyFavorites(){
+    this.navCtrl.navigateForward("/menu/favorite-books");
+    this.menu.close();
+  }
+
+
 }
