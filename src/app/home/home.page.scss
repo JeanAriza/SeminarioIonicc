@@ -36,3 +36,27 @@ ion-card ion-card-content {
   font-size: .8em;
   text-transform: lowercase;
 }
+
+
+ion-toolbar{
+  background-color: var(--proyecto-primary);
+}
+
+ion-toolbar{
+  background-color: var(--proyecto-primary);
+}
+
+ion-title{
+  background-color: var(--proyecto-primary);
+}
+
+ion-input{
+  color: red;
+  position: center;
+}
+
+.size-logo img{
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}

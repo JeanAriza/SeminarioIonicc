@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController, NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,8 @@ import { MenuController, NavController } from '@ionic/angular';
 export class MenuPage implements OnInit {
 
   constructor(private menu: MenuController,
-      private navCtrl: NavController
+      private navCtrl: NavController,
+      private storage: Storage
     ) { }
 
   ngOnInit() {
@@ -42,6 +44,7 @@ export class MenuPage implements OnInit {
     this.navCtrl.navigateRoot("/menu/favorite-books");
     this.menu.close();
   }
+
 
 
 }

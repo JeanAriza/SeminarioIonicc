@@ -17,6 +17,7 @@ export class AuthorsPage implements OnInit {
       this.authors = res;
       console.log(this.authors)
     })
-  }
+
+  }  
 
 }

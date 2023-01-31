@@ -71,5 +71,4 @@ export class LibraryService {
     return this.http.post(`${this.urlServer}dislike`, params, this.httpHeaders)
   }
 
-
 }
