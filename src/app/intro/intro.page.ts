@@ -18,25 +18,25 @@ export class IntroPage implements OnInit {
 
   slides = [
     {
-      title: "BlueBook",
+      title: "OrangeBook",
       img: "../../assets/icon/Logo Libreria.png",
-      description: "BlueBook te trae los mejores nuevos títulos seleccionados por nuestros editores. selección exclusiva de ficción contemporánea te ayuda a conectarte con historias absorbentes fuera de tu entorno."
+      description: "OragenBook te trae los mejores nuevos títulos seleccionados por nuestros editores. selección exclusiva de ficción contemporánea te ayuda a conectarte con historias absorbentes fuera de tu entorno."
     },
     {
-      title: "BlueBook",
+      title: "OrangeBook",
       desc: "¿Te interesa estar al día con el contexto político actual? Nuestra selección de libros electrónicos sobre política ofrece tanto intriga como conocimiento.",
       subtitle: "Suscribete",
-      description: "Con una suscripción a los libros electrónicos de BlueBook, puedes acceder a esos títulos y más mediante un navegador web o un dispositivo Android o iOS.",
+      description: "Con una suscripción a los libros electrónicos de OragenBook, puedes acceder a esos títulos y más mediante un navegador web o un dispositivo Android o iOS.",
       img: "assets/logo.png",
     },
     {
       desc: null,
-      subtitle: "BlueBook",
+      subtitle: "OragenBook",
       img: "../../assets/icon/Logo Libreria.png",
       description: " Si te interesa más explorar un nuevo pasatiempo o mejorar uno, te recomendamos explorar nuestros libros electrónicos sobre cocina, alimentos y vinos, así como nuestros títulos sobre el hogar y el jardín"
     },
     {
-      title: "BlueBook",
+      title: "OragenBook",
       desc: " trabajamos diariamente para ofrecerte los títulos que estás buscando en diversas áreas como: novelas, ficción, diccionarios, libros universitarios, cuentos infantiles y los best sellers de moda! todo a un solo clic. Encuentra el libro que estás necesitando en nuestro buscador inteligente.",
       subtitle: "Autores",
       description: " Nuestra amplia selección de libros electrónicos populares en verdad tiene algo para todos. Los títulos más vendidos sobre la superación personal —de personas como Mark Manson, Rachel Hollis, Stephen R. Covey y más—",

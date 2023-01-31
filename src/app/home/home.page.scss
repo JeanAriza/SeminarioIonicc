@@ -13,13 +13,10 @@ ion-card {
   margin: 0;
   padding: 0;
   height: 100px;
+  color: black;
 }
 
 ion-card ion-card-header {
-  padding: 10px 10px;
-}
-
-ion-card ion-card-content {
   padding: 10px 10px;
 }
 
@@ -30,23 +27,16 @@ ion-card-content ion-icon {
 ion-card ion-card-title {
   font-size: 20px;
   text-transform: uppercase;
-}
+
 
 ion-card ion-card-content {
   font-size: .8em;
   text-transform: lowercase;
 }
+}
 
 
 ion-toolbar{
-  background-color: var(--proyecto-primary);
-}
-
-ion-toolbar{
-  background-color: var(--proyecto-primary);
-}
-
-ion-title{
   background-color: var(--proyecto-primary);
 }
 
@@ -56,7 +46,9 @@ ion-input{
 }
 
 .size-logo img{
-  max-width: 100px;
-  margin: 0 auto;
-  display: block;
+  max-width: 50px;
+}
+
+ion-footer{
+  background-color: var(--proyecto-primary);
 }
