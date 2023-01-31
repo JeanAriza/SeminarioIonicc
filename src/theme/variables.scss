@@ -4,7 +4,23 @@
 /** Ionic CSS Variables **/
 :root {
   /*mis variables*/
+  --the-best-color: #37FA03 ;
+  --color-black: black;
+  --padding-parrafo: 20px 10px 20px 10px;
   --margin-parrafo: 40px 40px 20px 40px;
+  --proyecto-primary: #ff9900;
+
+
+
+
+
+
+
+
+
+
+
+  
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -78,7 +94,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------

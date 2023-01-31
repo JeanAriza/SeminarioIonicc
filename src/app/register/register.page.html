@@ -1,0 +1,179 @@
+<ion-content>
+
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+
+    <ion-item fill="solid">
+      <ion-label position="fixed">
+        <p>Nombre</p>
+      </ion-label>
+      <ion-input 
+      formControlName="nombre">
+      </ion-input>
+    </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validation_message.nombre">
+
+        <div *ngIf="
+          registerForm.get('nombre')?.hasError(validation.type) && 
+          (registerForm.get('nombre')?.dirty || 
+          registerForm.get('nombre')?.touched)
+          ">
+          {{validation.message}}
+        </div>
+
+
+      </ng-container>
+    </div>
+
+    <ion-item fill="solid">
+      <ion-label position="fixed">
+        <p>Apellido</p>
+      </ion-label>
+      <ion-input 
+      formControlName="apellido">
+      </ion-input>
+    </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validation_message.apellido">
+
+        <div *ngIf="
+          registerForm.get('apellido')?.hasError(validation.type) && 
+          (registerForm.get('apellido')?.dirty || 
+          registerForm.get('apellido')?.touched)
+          ">
+          {{validation.message}}
+        </div>
+
+
+      </ng-container>
+    </div>
+
+
+    <ion-item>
+      <ion-label>Tipo De Documento</ion-label>
+      <ion-select>
+        <ion-select-option value="TI">TI</ion-select-option>
+        <ion-select-option value="CC">CC</ion-select-option>
+        <ion-select-option value="NIP">NIP</ion-select-option>
+        <ion-select-option value="CE">CE</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item fill="solid">
+      <ion-label position="fixed">
+        <p>Numero Documento</p>
+      </ion-label>
+      <ion-input 
+      formControlName="numeroDocumento">
+      </ion-input>
+    </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validation_message.numeroDocumento">
+
+        <div *ngIf="
+          registerForm.get('numeroDocumento')?.hasError(validation.type) && 
+          (registerForm.get('numeroDocumento')?.dirty || 
+          registerForm.get('numeroDocumento')?.touched)
+          ">
+          {{validation.message}}
+        </div>
+
+
+      </ng-container>
+    </div>
+
+    <ion-item>
+      <ion-label>Carrera</ion-label>
+      <ion-select>
+        <ion-select-option value="Ingeneria Sistemas">Ingeneria Sistemas</ion-select-option>
+        <ion-select-option value="Ingeneria Industrial">Ingeneria Industrial</ion-select-option>
+        <ion-select-option value="Ingeneria Civil">Ingeneria Civil</ion-select-option>
+        <ion-select-option value="Contaduria">Contaduria</ion-select-option>
+        <ion-select-option value="Administracion De Empresas">Administracion De Empresas</ion-select-option>
+        <ion-select-option value="Ingeneria Electronica">Ingeneria Electronica</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="fixed">
+        <p>Email</p>
+      </ion-label>
+      <ion-input 
+        formControlName="email">
+      </ion-input>
+    </ion-item>
+      <div>
+        <ng-container *ngFor="let validation of validation_message.email">  
+          <div *ngIf="
+            registerForm.get('email')?.hasError(validation.type) && 
+            (registerForm.get('email')?.dirty || 
+            registerForm.get('email')?.touched)
+            ">
+            {{validation.message}}
+      </div>
+    </ng-container>
+      </div>
+
+
+<ion-item fill="solid">
+  <ion-label position="fixed">
+    <p>Password</p>
+  </ion-label>
+  <ion-input 
+  type="password" 
+  formControlName="password">
+  </ion-input>
+</ion-item>
+
+<div>
+  <ng-container *ngFor="let validation of validation_message.password">
+
+    <div *ngIf="
+      registerForm.get('password')?.hasError(validation.type) && 
+      (registerForm.get('password')?.dirty || 
+      registerForm.get('password')?.touched)
+      ">
+      {{validation.message}}
+    </div>
+
+
+  </ng-container>
+</div>
+
+
+  <ion-button 
+shape="round"
+  color="warning"
+  [disabled]="!registerForm.valid"
+  type="submit"
+  expand="block">
+  Registrarse
+</ion-button>
+<br>
+<figure class="size-logo">
+  <img src="../../assets/icon/Logo Libreria.png" />
+</figure>
+
+</form>
+</ion-content>
+
+<ion-toolbar color = "--proyecto-primary">
+  <ion-buttons>
+    <ion-button>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-header>
+  <ion-toolbar color = "--proyecto-primary">
+    <ion-buttons>
+      <ion-button (click)="goToLogin()">
+        <h4 class = "ion-text-center">Back</h4>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

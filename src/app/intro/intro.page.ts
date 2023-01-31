@@ -37,8 +37,9 @@ export class IntroPage implements OnInit {
     },
     {
       title: "BlueBook",
-      img: "../../assets/icon/Logo Libreria.png",
-      desc: " Nuestra amplia selección de libros electrónicos populares en verdad tiene algo para todos. Los títulos más vendidos sobre la superación personal —de personas como Mark Manson, Rachel Hollis, Stephen R. Covey y más—",
+      desc: " trabajamos diariamente para ofrecerte los títulos que estás buscando en diversas áreas como: novelas, ficción, diccionarios, libros universitarios, cuentos infantiles y los best sellers de moda! todo a un solo clic. Encuentra el libro que estás necesitando en nuestro buscador inteligente.",
+      subtitle: "Autores",
+      description: " Nuestra amplia selección de libros electrónicos populares en verdad tiene algo para todos. Los títulos más vendidos sobre la superación personal —de personas como Mark Manson, Rachel Hollis, Stephen R. Covey y más—",
       icon: "close"
     },
   ]

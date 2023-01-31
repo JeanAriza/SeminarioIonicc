@@ -1,0 +1,22 @@
+.size-logo img{
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+ion-toolbar{
+    background-color: var(--proyecto-primary);
+  }
+
+  ion-title{
+    background-color: var(--proyecto-primary);
+  }
+
+  ion-input{
+    color: red;
+    position: center;
+  }
+
+  ion-header{
+    background-color: var(--proyecto-primary);
+  }

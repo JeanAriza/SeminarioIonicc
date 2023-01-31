@@ -7,8 +7,7 @@
         <p class="ion-text-center">Email</p>
       </ion-label>
       <ion-input 
-      formControlName="email"
-      color="warning">
+      formControlName="email">
       </ion-input>
     </ion-item>
 <br>
@@ -35,8 +34,7 @@
       </ion-label>
       <ion-input 
       type="password" 
-      formControlName="password"
-      color="warning">
+      formControlName="password">
       </ion-input>
     </ion-item>
 
@@ -65,15 +63,19 @@
 
       Login
     </ion-button>
+    <br><br><br>
 
+    <figure class="size-logo">
+      <img src="../../assets/icon/Logo Libreria.png" />
+    </figure>
   </form>
-
+  {{ errorMessage }}
 </ion-content>  
 
-<ion-toolbar>
-  <ion-buttons slot="end">
+<ion-toolbar color = "--proyecto-primary">
+  <ion-buttons slot="end" (click)="registrarse()">
     <ion-button>
-      <h3>Register</h3>
+      <h5 >Register</h5>
     </ion-button>
   </ion-buttons>
 </ion-toolbar>

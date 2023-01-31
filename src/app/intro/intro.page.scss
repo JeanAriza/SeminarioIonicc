@@ -3,25 +3,25 @@ ion-content {
 }
 
 ion-slides{ 
-    background-color: rgb(117, 70, 31);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     max-width: 800px;
 }
 
 .swiper-slide{ 
   display: block;
-  background-image: url("../../assets/icon/Fondo\ Libreria.jpg");
+  background-color: var(--proyecto-primary);
   padding: 20px 0px 20px 0px;
 }
 
 ion-slide > h1,h2 { 
-  color: var(--color-black);
+  color: white;
   font-size: 40px;
-  text-shadow: 7px 4px 5px #D77203;
+  text-shadow: 7px 4px 5px #d9ff00;
 }
 
 ion-slide > p {
-  color: var(--color-black);
+  color: white;
   font-variant: small-caps;
   font-size: 20px; // tamaño de letra
   //border: solid; // Borde de parrafo
@@ -36,6 +36,6 @@ ion-slide > img {
 
 ion-slide > ion-icon[name="close"] {
   float: right;
-  color: #D77203;
+  color: white;
   font-size: 40px;
 }
