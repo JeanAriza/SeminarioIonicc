@@ -1,30 +1,13 @@
 <ion-content>
-  <ion-slides pager = "true" [options]="slideOpt">
-
-    <ion-slide>
-      <img src="../../assets/icon/Logo Libreria.png" alt="">
-      <h1>BlueBook</h1>
-      <p>BlueBook te trae los mejores nuevos títulos seleccionados por nuestros editores. <br><br> selección exclusiva de ficción contemporánea te ayuda a conectarte con historias absorbentes fuera de tu entorno.</p>
-    </ion-slide>
-
-    <ion-slide>
-      <p>¿Te interesa estar al día con el contexto político actual? Nuestra selección de libros electrónicos sobre política ofrece tanto intriga como conocimiento.</p>
-      <h1>BlueBook</h1>
-      <img src="../../assets/icon/Logo Libreria.png" alt="">
-    </ion-slide>
-
-    <ion-slide>
-      <img src="../../assets/icon/Logo Libreria.png" alt="">  
-      <h1>BlueBook</h1>   
-      <p> Si te interesa más explorar un nuevo pasatiempo o mejorar uno, te recomendamos explorar nuestros libros electrónicos sobre cocina, alimentos y vinos, así como nuestros títulos sobre el hogar y el jardín</p> 
-    </ion-slide>
-
-    <ion-slide>
-      <ion-icon name="close"(click)="finish()"></ion-icon>
-      <p>Con una suscripción a los libros electrónicos de BlueBook, puedes acceder a esos títulos y más mediante un navegador web o un dispositivo Android o iOS.</p>
-      <h1>BlueBook</h1>
-      <img src="../../assets/icon/Logo Libreria.png" alt="">
+  <ion-slides pager="true" [options]="slideOpt">
+    <ion-slide *ngFor="let slide of slides">
+      <ion-icon name={{slide.icon}} (click)="finish()"></ion-icon>
+      <img src={{slide.img}} alt="">
+      <h1>{{slide.title}}</h1>
+      <p>{{slide.desc}}</p>
+      <h2>{{slide.subtitle}}</h2>
+      <p>{{slide.description}}</p>
     </ion-slide>
 
   </ion-slides>
-</ion-content> 
+</ion-content>

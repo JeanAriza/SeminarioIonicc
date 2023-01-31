@@ -16,7 +16,7 @@ ion-slides{
 
 ion-slide > h1,h2 { 
   color: var(--color-black);
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 7px 4px 5px #D77203;
 }
 
@@ -24,9 +24,9 @@ ion-slide > p {
   color: var(--color-black);
   font-variant: small-caps;
   font-size: 20px; // tamaño de letra
-  border: solid; // Borde de parrafo
-  border-color: black; // Color letra
-  padding: var(--padding-parrafo); // Interior de marco
+  //border: solid; // Borde de parrafo
+  //border-color: black; // Color letra
+  //padding: var(--padding-parrafo); // Interior de marco
   margin: var(--margin-parrafo); // Exterior Marco
 }
 
@@ -36,6 +36,6 @@ ion-slide > img {
 
 ion-slide > ion-icon[name="close"] {
   float: right;
-  color: var(--color-black);
-  font-size: 35px;
+  color: #D77203;
+  font-size: 40px;
 }
