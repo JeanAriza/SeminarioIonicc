@@ -11,11 +11,11 @@ export class IntroGuard implements CanActivate {
   async canActivate(){
     const home = await this.storage.get('IsHomeShowed');
 
-    if(home==true){
-      this.router.navigateByUrl("/home");
-      return false;
-    }else{
+    if(home){
       return true;
+    }else{
+      this.router.navigateByUrl("/intro");
+      return false;
     }
   }
 }

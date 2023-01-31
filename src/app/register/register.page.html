@@ -10,10 +10,10 @@
       formControlName="nombre">
       </ion-input>
     </ion-item>
-
+    
     <div>
       <ng-container *ngFor="let validation of validation_message.nombre">
-
+        
         <div *ngIf="
           registerForm.get('nombre')?.hasError(validation.type) && 
           (registerForm.get('nombre')?.dirty || 
@@ -21,8 +21,8 @@
           ">
           {{validation.message}}
         </div>
-
-
+    
+    
       </ng-container>
     </div>
 
@@ -34,10 +34,10 @@
       formControlName="apellido">
       </ion-input>
     </ion-item>
-
+    
     <div>
       <ng-container *ngFor="let validation of validation_message.apellido">
-
+        
         <div *ngIf="
           registerForm.get('apellido')?.hasError(validation.type) && 
           (registerForm.get('apellido')?.dirty || 
@@ -45,21 +45,36 @@
           ">
           {{validation.message}}
         </div>
-
-
+    
+    
       </ng-container>
     </div>
 
 
     <ion-item>
       <ion-label>Tipo De Documento</ion-label>
-      <ion-select>
+      <ion-select formControlName="tipoDocumento">
         <ion-select-option value="TI">TI</ion-select-option>
         <ion-select-option value="CC">CC</ion-select-option>
         <ion-select-option value="NIP">NIP</ion-select-option>
         <ion-select-option value="CE">CE</ion-select-option>
       </ion-select>
     </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validation_message.tipoDocumento">
+        
+        <div *ngIf="
+          registerForm.get('tipoDocumento')?.hasError(validation.type) && 
+          (registerForm.get('tipoDocumento')?.dirty || 
+          registerForm.get('tipoDocumento')?.touched)
+          ">
+          {{validation.message}}
+        </div>
+    
+    
+      </ng-container>
+    </div>
 
 
     <ion-item fill="solid">
@@ -70,10 +85,10 @@
       formControlName="numeroDocumento">
       </ion-input>
     </ion-item>
-
+    
     <div>
       <ng-container *ngFor="let validation of validation_message.numeroDocumento">
-
+        
         <div *ngIf="
           registerForm.get('numeroDocumento')?.hasError(validation.type) && 
           (registerForm.get('numeroDocumento')?.dirty || 
@@ -81,14 +96,14 @@
           ">
           {{validation.message}}
         </div>
-
-
+    
+    
       </ng-container>
     </div>
 
     <ion-item>
       <ion-label>Carrera</ion-label>
-      <ion-select>
+      <ion-select formControlName="career">
         <ion-select-option value="Ingeneria Sistemas">Ingeneria Sistemas</ion-select-option>
         <ion-select-option value="Ingeneria Industrial">Ingeneria Industrial</ion-select-option>
         <ion-select-option value="Ingeneria Civil">Ingeneria Civil</ion-select-option>
@@ -97,6 +112,21 @@
         <ion-select-option value="Ingeneria Electronica">Ingeneria Electronica</ion-select-option>
       </ion-select>
     </ion-item>
+
+    <div>
+      <ng-container *ngFor="let validation of validation_message.career">
+        
+        <div *ngIf="
+          registerForm.get('career')?.hasError(validation.type) && 
+          (registerForm.get('career')?.dirty || 
+          registerForm.get('career')?.touched)
+          ">
+          {{validation.message}}
+        </div>
+    
+    
+      </ng-container>
+    </div>
 
     <ion-item fill="solid">
       <ion-label position="fixed">
@@ -131,7 +161,7 @@
 
 <div>
   <ng-container *ngFor="let validation of validation_message.password">
-
+    
     <div *ngIf="
       registerForm.get('password')?.hasError(validation.type) && 
       (registerForm.get('password')?.dirty || 

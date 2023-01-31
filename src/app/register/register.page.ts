@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
-import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,9 +21,15 @@ export class RegisterPage implements OnInit {
       { type: "required", message: "Campo Obligatorio" },
       { type: "pattern", message: "No Permite Numeros" }
     ],
+    tipoDocumento: [
+      { type: "required", message: "Campo Obligatorio" },
+    ],
     numeroDocumento: [
       { type: "required", message: "Campo Obligatorio" },
       { type: "pattern", message: "No Permite Letras" }
+    ],
+    career: [
+      { type: "required", message: "Campo Obligatorio" },
     ],
     email: [
       { type: "required", message: "Campo Obligatorio" },
@@ -36,10 +41,8 @@ export class RegisterPage implements OnInit {
     ],
   }
   constructor(private navCtrl: NavController, 
-    private auth: AuthenticateService, 
-    private formBuilder: FormBuilder,
-    private storage: Storage,
-    private router: Router) { 
+    private authenticate: AuthenticateService, 
+    private formBuilder: FormBuilder) { 
 
     this.registerForm = this.formBuilder.group({
       nombre: new FormControl("",
@@ -52,7 +55,10 @@ export class RegisterPage implements OnInit {
         Validators.required,
         Validators.pattern("[a-z A-Z-]+$")
       ])),
-      document_type: new FormControl(),
+      tipoDocumento: new FormControl("",
+      Validators.compose([
+        Validators.required,
+      ])),
       numeroDocumento: new FormControl(
         "",
         Validators.compose([
@@ -60,7 +66,10 @@ export class RegisterPage implements OnInit {
           Validators.pattern("^[0-9]+$")
         ])
       ),
-      career: new FormControl(),
+      career: new FormControl("",
+      Validators.compose([
+        Validators.required,
+      ])),
       email: new FormControl(
         "",
         Validators.compose([
@@ -84,9 +93,10 @@ export class RegisterPage implements OnInit {
   goToLogin(){
     this.navCtrl.navigateBack("/login");
   }
-
   registerUser(register_form: any){
     console.log(register_form)
+    this.authenticate.registerUser(register_form).then(() => {
+      this.navCtrl.navigateForward("/login");
+    });
   }
-
 }

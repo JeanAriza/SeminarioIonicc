@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
@@ -23,12 +23,12 @@ export class LoginPage implements OnInit {
       { type: "minLength", message: "Password Invalida" }
     ]
   }
-
   errorMessage: any;
   constructor(private formBuilder: FormBuilder,    
     private auth: AuthenticateService, 
     private navCtrl: NavController,
     private storage: Storage,
+    private alertController: AlertController,
     private router: Router){ 
 
     this.loginForm = this.formBuilder.group({
@@ -52,17 +52,28 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  loginUser(credentials: any) {
+  loginUser(credentials: any){
     console.log(credentials);
-    this.auth.loginUser(credentials).then( res => {
-      this.errorMessage = "";
+    this.auth.loginUser(credentials).then((res: any) =>{
       this.storage.set("isUserLoggedIn", true);
-      this.navCtrl.navigateForward("/home");
-    }).catch(err => {
-      this.errorMessage = err
+      this.navCtrl.navigateForward("/menu/home")
+    }).catch(error => {
+      //this.errorMessage = error 
+      this.presentAlert("Houston,", "tenemos un problema ", error)
     });
   }
-  registrarse(){
+
+ async presentAlert(header: any, subHeader: any, message: any){
+    const alert = await this.alertController.create({
+      header: header,
+      subHeader: subHeader,
+      message: message,
+      buttons: ['Aceptar']
+    })
+    await alert.present();
+  }
+  registrate(){
     this.router.navigateByUrl("/register");
   }
+
 }
