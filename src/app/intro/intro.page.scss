@@ -1,0 +1,41 @@
+ion-content {
+    --background: rgb(0, 0, 0);
+}
+
+ion-slides{ 
+    background-color: rgb(117, 70, 31);
+    height: 100%;
+    max-width: 800px;
+}
+
+.swiper-slide{ 
+  display: block;
+  background-image: url("../../assets/icon/Fondo\ Libreria.jpg");
+  padding: 20px 0px 20px 0px;
+}
+
+ion-slide > h1,h2 { 
+  color: var(--color-black);
+  font-size: 50px;
+  text-shadow: 7px 4px 5px #D77203;
+}
+
+ion-slide > p {
+  color: var(--color-black);
+  font-variant: small-caps;
+  font-size: 20px; // tamaño de letra
+  border: solid; // Borde de parrafo
+  border-color: black; // Color letra
+  padding: var(--padding-parrafo); // Interior de marco
+  margin: var(--margin-parrafo); // Exterior Marco
+}
+
+ion-slide > img {
+  padding: 20px 80px 0px 80px;
+}
+
+ion-slide > ion-icon[name="close"] {
+  float: right;
+  color: var(--color-black);
+  font-size: 35px;
+}
