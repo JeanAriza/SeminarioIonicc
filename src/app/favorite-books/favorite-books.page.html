@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-back-button text="Volver" ></ion-back-button>
     </ion-buttons>
@@ -14,10 +14,15 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let favorite of my_favorite_books">
+    <ion-item *ngFor="let favorite of my_favorite_books" (click)="showBook(favorite)">
       <ion-label>{{favorite.name}}</ion-label>
     </ion-item>
 
   </ion-list>
 
 </ion-content>
+<ion-footer >
+  <ion-toolbar color="warning">
+    <h1 class="ion-text-center">OrangeBook</h1>
+  </ion-toolbar>
+</ion-footer>

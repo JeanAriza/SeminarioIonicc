@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LibraryService } from '../services/library.service';
+import { ModalController } from '@ionic/angular';
+import { AuthorDetailModalPage } from '../author-detail-modal/author-detail-modal.page';
 
 
 
@@ -12,7 +14,8 @@ export class AuthorsPage implements OnInit {
 
   authors: any;
 
-  constructor(private libraryService: LibraryService,) { }
+  constructor(private libraryService: LibraryService,
+    private modalController: ModalController) { }
 
   ngOnInit() {
     this.libraryService.getAuthors().then( res => {
@@ -20,4 +23,14 @@ export class AuthorsPage implements OnInit {
       console.log(this.authors)
     })
   } 
+
+  async showAuthor(author: any){
+    const modal = await this.modalController.create({
+      component: AuthorDetailModalPage,
+      componentProps: {
+        author: author 
+      }
+    });
+    return await modal.present();
+  }
 }

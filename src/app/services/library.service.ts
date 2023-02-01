@@ -51,6 +51,9 @@ export class LibraryService {
   getCheckLikeBook(user_id: any, book_id: any){
     return this.http.get(`${this.urlServer}check_favorite?user_id=${user_id}&book_id=${book_id}`)
   }
+  getCheckLikeAuthor(user_id: any, author_id: any){
+    return this.http.get(`${this.urlServer}check_favorite?user_id=${user_id}&book_id=${author_id}`)
+  }
 
   likeBook(user_id: any, book_id: any){
     let params = {

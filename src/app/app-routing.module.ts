@@ -27,12 +27,16 @@ const routes: Routes = [
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule), canActivate: [LoginGuard]
   },
   {
-    path: 'books-modal',
-    loadChildren: () => import('./books-modal/books-modal.module').then( m => m.BooksModalPageModule)
-  },
-  {
     path: 'book-detail-modal',
     loadChildren: () => import('./book-detail-modal/book-detail-modal.module').then( m => m.BookDetailModalPageModule)
+  },
+  {
+    path: 'author-modal',
+    loadChildren: () => import('./author-modal/author-modal.module').then( m => m.AuthorModalPageModule)
+  },
+  {
+    path: 'author-detail-modal',
+    loadChildren: () => import('./author-detail-modal/author-detail-modal.module').then( m => m.AuthorDetailModalPageModule)
   },
 ];
 

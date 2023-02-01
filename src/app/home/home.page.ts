@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LibraryService } from '../services/library.service';
 import { ModalController,MenuController,NavController } from '@ionic/angular';
-import { BooksModalPage } from '../books-modal/books-modal.page';
+import { AuthorModalPage } from '../author-modal/author-modal.page';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class HomePage {
   booksOff: any;
 
   slideOps = {
-    initialSlide: 2,
+    initialSlide: 0,
     slidesPerView: 3,
     centeredSlides: true,
     speed: 400
@@ -35,9 +35,9 @@ export class HomePage {
     console.log(this.booksOff.books);
   }
 
-  async showBooks(author:any) {
+  async showAuthor(author:any) {
     const modal = await this.modalController.create({
-      component: BooksModalPage,
+      component: AuthorModalPage,
       componentProps: {
         author: author
       }

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BooksModalPageRoutingModule } from './books-modal-routing.module';
+import { AuthorModalPageRoutingModule } from './author-modal-routing.module';
 
-import { BooksModalPage } from './books-modal.page';
+import { AuthorModalPage } from './author-modal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BooksModalPageRoutingModule
+    AuthorModalPageRoutingModule
   ],
-  declarations: [BooksModalPage]
+  declarations: [AuthorModalPage]
 })
-export class BooksModalPageModule {}
+export class AuthorModalPageModule {}
