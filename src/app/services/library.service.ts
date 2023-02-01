@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LibraryService {
 
+  authors: any;
   
   urlServer = "https://librarypca.fly.dev/";
   httpHeaders = { headers: new HttpHeaders({"Content-Type": "application/json"}) };
@@ -69,6 +70,10 @@ export class LibraryService {
       }
     }
     return this.http.post(`${this.urlServer}dislike`, params, this.httpHeaders)
+  }
+
+  GetListTop(){
+    return fetch(`https://librarypca.fly.dev/top_books`).then(list => list.json())
   }
 
 }

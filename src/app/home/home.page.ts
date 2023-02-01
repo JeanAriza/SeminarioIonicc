@@ -15,7 +15,7 @@ export class HomePage {
   booksOff: any;
 
   slideOps = {
-    initialSlide: 1,
+    initialSlide: 2,
     slidesPerView: 3,
     centeredSlides: true,
     speed: 400
@@ -61,7 +61,10 @@ export class HomePage {
     this.menu.close();
   }
 
-
+  goTotop(){
+    this.navCtrl.navigateForward("/menu/top");
+    this.menu.close();
+  }
 
 
 }

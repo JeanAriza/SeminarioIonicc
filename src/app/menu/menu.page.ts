@@ -45,6 +45,11 @@ export class MenuPage implements OnInit {
     this.menu.close();
   }
 
+  goTotop(){
+    this.navCtrl.navigateRoot("/menu/top");
+    this.menu.close();
+  }
+
 
 
 }
